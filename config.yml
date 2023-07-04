@@ -1,0 +1,8 @@
+development:
+  password: shptka_d57d8cb5c6225f93a0bdc4f822a35a2a
+  theme_id: "124247605327"
+  store: u-lace-no-tie-laces.myshopify.com
+  ignore_files:
+  - config/settings_data.json
+  - templates/*.json
+

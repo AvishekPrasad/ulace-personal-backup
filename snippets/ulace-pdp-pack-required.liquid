@@ -1,0 +1,12 @@
+<div class="pdp-wrapper clearfix">
+    {% if section.settings.description_text %}
+    <div class="pdp-information-bar" {% if section.settings.background_color %} style="background-color:{{ section.settings.background_color }}" {% endif %}>
+        {{ section.settings.description_text }}
+    </div>
+  	{% if section.settings.show_description_text %}
+      <div class="pdp-information-description">
+        <p>{{ section.settings.long_description_text }}</p>
+      </div>
+  	{% endif %}
+    {% endif %}
+</div>

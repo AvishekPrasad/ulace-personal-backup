@@ -1,0 +1,572 @@
+{
+  "sections": {
+    "edf39194-1c65-4984-9821-6b244c153f8e": {
+      "type": "hero-video",
+      "settings": {
+        "title": "Life without shoelace hassle",
+        "title_size": 40,
+        "subheading": "No-tie shoelaces for people with no time to waste",
+        "link_text": "Shop now",
+        "link": "shopify:\/\/collections\/all",
+        "color_accent": "#1f6fb3",
+        "text_align": "vertical-bottom horizontal-right",
+        "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/bc1a26e628654be6a6bb3d0b1d1bca05.mp4",
+        "overlay_opacity": 0,
+        "section_height": "550px",
+        "mobile_height": "auto"
+      }
+    },
+    "1f308b88-ab0a-41bd-9db2-8959c77922c5": {
+      "type": "featured-video",
+      "custom_css": [
+        ".video-wrapper {max-width: 640px; margin: 0 auto;}",
+        "@media (min-width: 769px) {.video-wrapper {padding-bottom: 399px; }}"
+      ],
+      "settings": {
+        "title": "",
+        "video_url": "https:\/\/youtu.be\/h49TdhPchd4",
+        "divider": false
+      }
+    },
+    "0fc81311-79ac-4ea8-b11b-6b1e20a9dccc": {
+      "type": "dropdowns",
+      "blocks": {
+        "91b3d9a3-56f0-47c9-9ff3-769c242de859": {
+          "type": "dropdown",
+          "settings": {
+            "dropdown_list": "shop-collections"
+          }
+        }
+      },
+      "block_order": [
+        "91b3d9a3-56f0-47c9-9ff3-769c242de859"
+      ],
+      "custom_css": [
+        "@media only screen and (min-width: 769px) {.dropdowns-section-heading {margin-bottom: 15px; }}"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true,
+        "title": "Shop with",
+        "lazyload_images": true
+      }
+    },
+    "1d511835-7f28-4b16-bbaf-13e9df1dd404": {
+      "type": "promo-grid",
+      "blocks": {
+        "template--15005269131343__1d511835-7f28-4b16-bbaf-13e9df1dd404-168750874106896881-0": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "uLace Classic",
+            "textarea": "The original uLaces designed for wide eyelet-span sneakers. Available in over 60 colors and designs.",
+            "cta_text1": "Shop Classic",
+            "cta_link1": "shopify:\/\/products\/classic-black-no-tie-shoelaces",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify:\/\/shop_images\/ChambrayProductSpotlightImage_2_2_1.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 480,
+            "text_size": 80,
+            "text_align": "vertical-bottom horizontal-left",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": true,
+            "framed": false
+          }
+        },
+        "template--15005269131343__1d511835-7f28-4b16-bbaf-13e9df1dd404-168750874106896881-1": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "uLace Kiddos",
+            "textarea": "The uLaces designed for sneakers worn by kids ages 3 to 13. Available in over 60 colors and designs.",
+            "cta_text1": "Shop Kiddos",
+            "cta_link1": "shopify:\/\/products\/kiddos-black-no-tie-shoelaces",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify:\/\/shop_images\/review_kid_learn_to_tie.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 480,
+            "text_size": 80,
+            "text_align": "vertical-bottom horizontal-left",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": true,
+            "framed": false
+          }
+        },
+        "4fbba8ce-d372-45d1-ac2c-a11801a2e296": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "uLace Slims",
+            "textarea": "The uLaces designed for mediumeyelet-span sneakers. Available in over 40 colors and designs.",
+            "cta_text1": "Shop Slims",
+            "cta_link1": "shopify:\/\/products\/u-lace-slims-black-no-tie-shoelaces",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify:\/\/shop_images\/ulace_ourProduct_Slims_4bfc7333-ef87-495f-924c-7abacc146781_1.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 480,
+            "text_size": 80,
+            "text_align": "vertical-bottom horizontal-left",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": true,
+            "framed": false
+          }
+        },
+        "daa78a08-eb3e-491d-a79d-b5074315f8a6": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "uLace Shorts",
+            "textarea": "The uLaces designed for narrow eyelet-span sneakers. Available in over 40 colors and designs.",
+            "cta_text1": "Shop Shorts",
+            "cta_link1": "shopify:\/\/products\/shorts-black-no-tie-shoelaces",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify:\/\/shop_images\/SHORTS_CHAMBRAY_Royal_HalfHalf_opt_55969452-9dae-4368-ad95-af6b4852e0e7.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 480,
+            "text_size": 80,
+            "text_align": "vertical-bottom horizontal-left",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": true,
+            "framed": false
+          }
+        },
+        "8cd667f3-c820-4a9e-9218-b71c030df6b0": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "uLace ProFormance",
+            "textarea": "The newest uLaces designed specially for performance sneakers. 18 colors available.",
+            "cta_text1": "Shop ProFormance",
+            "cta_link1": "#",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify:\/\/shop_images\/imgpsh_fullsize_anim_8fedba18-ff2b-4984-86be-7e513080bcc8_1.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 480,
+            "text_size": 80,
+            "text_align": "vertical-bottom horizontal-left",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": true,
+            "framed": false
+          }
+        },
+        "4879c384-ce20-469b-84f0-f726ae60bcf3": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "uLace Siliprint",
+            "textarea": "The original uLaces designed for wide eyelet-span sneakers. Available in over 60 colors and designs.",
+            "cta_text1": "Shop Siliprint",
+            "cta_link1": "shopify:\/\/products\/siliprint-red-white-blue-no-tie-shoelaces",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify:\/\/shop_images\/siliprint_1_4c4dc77d-918f-49be-9c58-92be86b64e30_1.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 480,
+            "text_size": 80,
+            "text_align": "vertical-bottom horizontal-left",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": true,
+            "framed": false
+          }
+        }
+      },
+      "block_order": [
+        "template--15005269131343__1d511835-7f28-4b16-bbaf-13e9df1dd404-168750874106896881-0",
+        "template--15005269131343__1d511835-7f28-4b16-bbaf-13e9df1dd404-168750874106896881-1",
+        "4fbba8ce-d372-45d1-ac2c-a11801a2e296",
+        "daa78a08-eb3e-491d-a79d-b5074315f8a6",
+        "8cd667f3-c820-4a9e-9218-b71c030df6b0",
+        "4879c384-ce20-469b-84f0-f726ae60bcf3"
+      ],
+      "settings": {
+        "full_width": false,
+        "gutter_size": 30,
+        "space_above": false,
+        "space_below": true,
+        "lazyload_images": true
+      }
+    },
+    "promo-grid": {
+      "type": "promo-grid",
+      "blocks": {
+        "promo-1": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "Don’t know which uLaces <br>to buy for the perfect fit?",
+            "textarea": "Our 30-second quiz will zero in on the\nperfect uLaces for your sneakers",
+            "cta_text1": "TAKE THE QUIZ",
+            "cta_link1": "#",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify:\/\/shop_images\/about_us_image_1.jpg",
+            "video_url": "",
+            "width": "100",
+            "height": 640,
+            "text_size": 80,
+            "text_align": "vertical-bottom horizontal-center",
+            "color_accent": "#1f6fb3",
+            "boxed": true,
+            "framed": false
+          }
+        }
+      },
+      "block_order": [
+        "promo-1"
+      ],
+      "settings": {
+        "full_width": false,
+        "gutter_size": 20,
+        "space_above": false,
+        "space_below": false,
+        "lazyload_images": true
+      }
+    },
+    "rich-text": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "USE YOU TIME ON THINGS THAT REALLY MATTER"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Fact 1: standard shoelaces will always come<br\/>untied*. Always. And it begins with the very<br\/>\u001frst step you take.<\/p><p>Fact 2: average human will spend 30<br\/>days of their life just tying, untying<br\/>and re-tying standard shoelaces.<\/p><p>And if - for any reason - you struggle<br\/>to tie standard shoelaces well,<br\/>that’s an entire di\u001eerent hassle. <\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "2bb581c2-c7a2-4027-957b-79aa2a3b2f2c": {
+      "type": "slideshow",
+      "blocks": {
+        "template--15001968377935__2bb581c2-c7a2-4027-957b-79aa2a3b2f2c-1687265204790d2324-0": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "title": "\"Don’t know which uLaces to buy for the perfect fit?\"",
+            "title_size": 40,
+            "subheading": "-Author",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify:\/\/shop_images\/landingpage2-banner.png",
+            "parallax_direction": "top",
+            "overlay_opacity": 0
+          }
+        },
+        "template--15001968377935__2bb581c2-c7a2-4027-957b-79aa2a3b2f2c-1687265204790d2324-1": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "title": "\"Our Customer Focus Shows In Our Product Benefits\"",
+            "title_size": 40,
+            "subheading": "-Author",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify:\/\/shop_images\/about-banner.png",
+            "parallax_direction": "top",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "template--15001968377935__2bb581c2-c7a2-4027-957b-79aa2a3b2f2c-1687265204790d2324-0",
+        "template--15001968377935__2bb581c2-c7a2-4027-957b-79aa2a3b2f2c-1687265204790d2324-1"
+      ],
+      "settings": {
+        "section_height": "450px",
+        "mobile_height": "auto",
+        "parallax": true,
+        "style": "minimal",
+        "autoplay": true,
+        "autoplay_speed": 5,
+        "lazyload_images": true
+      }
+    },
+    "featured-collections": {
+      "type": "featured-collections",
+      "disabled": true,
+      "blocks": {
+        "featured-collections-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "featured-collections-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "featured-collections-2": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "featured-collections-3": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "title": "",
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "featured-collections-0",
+        "featured-collections-1",
+        "featured-collections-2",
+        "featured-collections-3"
+      ],
+      "settings": {
+        "title": "Shop by category",
+        "divider": false,
+        "per_row": 4,
+        "enable_gutter": true
+      }
+    },
+    "bdc8d7a6-df6e-4b68-b27d-d13748e542a5": {
+      "type": "testimonials",
+      "blocks": {
+        "template--15005269131343__bdc8d7a6-df6e-4b68-b27d-d13748e542a5-1687517867b2c98d05-0": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+            "image": "shopify:\/\/shop_images\/about_us_image_1_0e9a70c6-5310-4fe8-b1db-a23f48784628.jpg",
+            "author": "",
+            "author_info": "Los Angeles, CA"
+          }
+        },
+        "template--15005269131343__bdc8d7a6-df6e-4b68-b27d-d13748e542a5-1687517867b2c98d05-1": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+            "image": "shopify:\/\/shop_images\/about_us_image_1_0e9a70c6-5310-4fe8-b1db-a23f48784628.jpg",
+            "author": "",
+            "author_info": "Los Angeles, CA"
+          }
+        },
+        "template--15005269131343__bdc8d7a6-df6e-4b68-b27d-d13748e542a5-1687517867b2c98d05-2": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+            "image": "shopify:\/\/shop_images\/about_us_image_1_0e9a70c6-5310-4fe8-b1db-a23f48784628.jpg",
+            "author": "",
+            "author_info": "Los Angeles, CA"
+          }
+        },
+        "template--15005269131343__bdc8d7a6-df6e-4b68-b27d-d13748e542a5-1687517867b2c98d05-3": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+            "image": "shopify:\/\/shop_images\/about_us_image_1_0e9a70c6-5310-4fe8-b1db-a23f48784628.jpg",
+            "author": "",
+            "author_info": "Los Angeles, CA"
+          }
+        },
+        "template--15005269131343__bdc8d7a6-df6e-4b68-b27d-d13748e542a5-1687517867b2c98d05-4": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+            "image": "shopify:\/\/shop_images\/about_us_image_1_0e9a70c6-5310-4fe8-b1db-a23f48784628.jpg",
+            "author": "",
+            "author_info": "Los Angeles, CA"
+          }
+        }
+      },
+      "block_order": [
+        "template--15005269131343__bdc8d7a6-df6e-4b68-b27d-d13748e542a5-1687517867b2c98d05-0",
+        "template--15005269131343__bdc8d7a6-df6e-4b68-b27d-d13748e542a5-1687517867b2c98d05-1",
+        "template--15005269131343__bdc8d7a6-df6e-4b68-b27d-d13748e542a5-1687517867b2c98d05-2",
+        "template--15005269131343__bdc8d7a6-df6e-4b68-b27d-d13748e542a5-1687517867b2c98d05-3",
+        "template--15005269131343__bdc8d7a6-df6e-4b68-b27d-d13748e542a5-1687517867b2c98d05-4"
+      ],
+      "settings": {
+        "title": "Why People Love uLace",
+        "align_text": "center",
+        "round_images": true,
+        "color_background": "#d1d2d4",
+        "color_text": "#1c1d1d"
+      }
+    },
+    "5c27d7a2-9967-45b5-898a-4611ed8a8f58": {
+      "type": "faq",
+      "blocks": {
+        "template--15001968377935__5c27d7a2-9967-45b5-898a-4611ed8a8f58-168726576898b2fce5-0": {
+          "type": "question",
+          "settings": {
+            "title": "Frequently asked question",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>"
+          }
+        },
+        "template--15001968377935__5c27d7a2-9967-45b5-898a-4611ed8a8f58-168726576898b2fce5-1": {
+          "type": "question",
+          "settings": {
+            "title": "Frequently asked question",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>"
+          }
+        },
+        "5ba9caf7-d032-440d-80b6-314834dc8c17": {
+          "type": "question",
+          "settings": {
+            "title": "Frequently asked question",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>"
+          }
+        },
+        "c8789ae4-1326-4d54-b609-196d021d90a2": {
+          "type": "question",
+          "settings": {
+            "title": "Frequently asked question",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--15001968377935__5c27d7a2-9967-45b5-898a-4611ed8a8f58-168726576898b2fce5-0",
+        "template--15001968377935__5c27d7a2-9967-45b5-898a-4611ed8a8f58-168726576898b2fce5-1",
+        "5ba9caf7-d032-440d-80b6-314834dc8c17",
+        "c8789ae4-1326-4d54-b609-196d021d90a2"
+      ],
+      "custom_css": [],
+      "settings": {
+        "title": "Your Questions Answered"
+      }
+    },
+    "e7b5d6cc-6e6e-4c7a-b883-393a620ff3cd": {
+      "type": "text-with-icons",
+      "blocks": {
+        "template--15001968377935__e7b5d6cc-6e6e-4c7a-b883-393a620ff3cd-168726621149720a6b-0": {
+          "type": "text_block",
+          "settings": {
+            "icon": "package",
+            "title": "Free USA Shipping",
+            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products.<\/p>"
+          }
+        },
+        "template--15001968377935__e7b5d6cc-6e6e-4c7a-b883-393a620ff3cd-168726621149720a6b-1": {
+          "type": "text_block",
+          "settings": {
+            "icon": "charity",
+            "title": "Lifetime Warranty",
+            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products.<\/p>"
+          }
+        },
+        "template--15001968377935__e7b5d6cc-6e6e-4c7a-b883-393a620ff3cd-168726621149720a6b-2": {
+          "type": "text_block",
+          "settings": {
+            "icon": "shield",
+            "title": "The uLace Guarantee",
+            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--15001968377935__e7b5d6cc-6e6e-4c7a-b883-393a620ff3cd-168726621149720a6b-0",
+        "template--15001968377935__e7b5d6cc-6e6e-4c7a-b883-393a620ff3cd-168726621149720a6b-1",
+        "template--15001968377935__e7b5d6cc-6e6e-4c7a-b883-393a620ff3cd-168726621149720a6b-2"
+      ],
+      "settings": {
+        "title": "",
+        "align_text": "center",
+        "desktop_columns_per_row": 3,
+        "icon_color": "#1f6fb3",
+        "button_label": "",
+        "button_link": "",
+        "divider": false
+      }
+    },
+    "168751910406934428": {
+      "type": "apps",
+      "disabled": true,
+      "blocks": {
+        "d31b94f3-e0e9-4806-8928-e9376819d686": {
+          "type": "shopify:\/\/apps\/loox-product-reviews-photos\/blocks\/loox-testimonial-carousel-section\/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "maxWidth": 1100,
+            "desktopFontSize": 21,
+            "mobileFontSize": 20,
+            "maxNumberOfCharacters": 270,
+            "quoteMarkIcon": "none",
+            "reviewerNameColor": "#000000",
+            "textColor": "#000000",
+            "starsColor": "",
+            "quotesIconColor": "#eaeaea",
+            "arrows_iconColor": "#000000",
+            "arrows_hideOnMobile": true,
+            "pagination_active": true,
+            "pagination_selectedDotColor": "#000000",
+            "pagination_dotColor": "#000000",
+            "autoplay_active": false,
+            "autoplay_duration": 2,
+            "productIds": ""
+          }
+        }
+      },
+      "block_order": [
+        "d31b94f3-e0e9-4806-8928-e9376819d686"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    }
+  },
+  "order": [
+    "edf39194-1c65-4984-9821-6b244c153f8e",
+    "1f308b88-ab0a-41bd-9db2-8959c77922c5",
+    "0fc81311-79ac-4ea8-b11b-6b1e20a9dccc",
+    "1d511835-7f28-4b16-bbaf-13e9df1dd404",
+    "promo-grid",
+    "rich-text",
+    "2bb581c2-c7a2-4027-957b-79aa2a3b2f2c",
+    "featured-collections",
+    "bdc8d7a6-df6e-4b68-b27d-d13748e542a5",
+    "5c27d7a2-9967-45b5-898a-4611ed8a8f58",
+    "e7b5d6cc-6e6e-4c7a-b883-393a620ff3cd",
+    "168751910406934428"
+  ]
+}
