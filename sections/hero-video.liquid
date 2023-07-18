@@ -109,9 +109,13 @@
 
           {%- unless section.settings.title == blank -%}
             <h2 class="h1 hero__title">
-              <div class="animation-cropper"><div class="animation-contents">
-              {{ section.settings.title | newline_to_br }}
-              </div></div>
+              <div class="animation-cropper"><div class="animation-contents desk_videolink_with_text">
+                {{ section.settings.title | newline_to_br }}
+              </div>
+              <div class="animation-contents mob_videolink_with_text">
+                {{ section.settings.mob_link_text | newline_to_br }}
+              </div>
+            </div>
             </h2>
           {%- endunless -%}
           {%- if section.settings.subheading or section.settings.link -%}
@@ -139,6 +143,7 @@
                         <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-play" viewBox="18.24 17.35 24.52 28.3"><path fill="#323232" d="M22.1 19.151v25.5l20.4-13.489-20.4-12.011z"/></svg>
                       {%- endif -%}
                       {{ section.settings.link_text }}
+                      
                     </a>
                   </div>
                 </div>
@@ -151,6 +156,13 @@
   </div>
 
 </div>
+{% if section.settings.video_url != blank %}
+  <style>
+   .site-header {
+   border-bottom: none;
+}
+</style>                          
+{% endif %}
 
 {% schema %}
 {
@@ -162,6 +174,12 @@
       "id": "title",
       "label": "t:sections.hero-video.settings.title.label",
       "default": "Bring your\nbrand to life."
+    },
+    {
+      "type": "textarea",
+      "id": "mob_link_text",
+      "label": "Mobile Main heading",
+      "default": "Life without shoelace hassle for people with no time"
     },
     {
       "type": "range",

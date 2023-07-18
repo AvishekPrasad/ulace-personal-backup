@@ -23,8 +23,8 @@
         </button>
 
         <div
-          id="AnnouncementSlider"
-          class="announcement-slider"
+          {% comment %} id="AnnouncementSlider" {% endcomment %}
+          class="announcement-slider announcement_bar_vertical_slider"
           data-compact="{{ section.settings.announcement_compact }}"
           data-block-count="{{ announcement_block_count }}">
           {%- assign slide_index = 0 -%}
@@ -32,7 +32,7 @@
             {%- if block.type == 'announcement' -%}
               <div
                 id="AnnouncementSlide-{{ block.id }}"
-                class="announcement-slider__slide"
+                {% comment %} class="announcement-slider__slide slideshow__slide" {% endcomment %}
                 data-index="{{ slide_index }}"
                 {{ block.shopify_attributes }}>
                 {%- if block.settings.link != blank -%}
@@ -42,7 +42,10 @@
                     <span class="announcement-text">{{ block.settings.text }}</span>
                   {%- endif -%}
                   {%- if block.settings.link_text != blank -%}
-                    <span class="announcement-link-text">{{ block.settings.link_text }}</span>
+                    <span class="announcement-link-text desk_announcement_text">{{ block.settings.link_text }}</span>
+                  {%- endif -%}
+                  {%- if block.settings.mob_link_text != blank -%}
+                    <span class="announcement-link-text mobile_announcement_text">{{ block.settings.mob_link_text }}</span>
                   {%- endif -%}
                 {%- if block.settings.link != blank -%}
                   </a>
@@ -57,3 +60,50 @@
   </div>
 
 {% endif %}
+
+<style>
+
+  .announcement-slider__slide.slideshow__slide{
+    transition: transform 0.5s ease-in 0.05s, opacity 0.5s ease-in 0.05s;
+  }
+
+  {% comment %} #AnnouncementSlider .flickity-slider{
+    transform: translateX(0px) !important;
+  }
+  #AnnouncementSlider .announcement-slider__slide{
+    transform: translateX(0px) !important;
+  }
+  .announcement-slider__slide{
+    opacity: 0;
+  }
+  .announcement-slider__slide.is-selected{
+    opacity: 1;
+    animation: myAnim 0.5s cubic-bezier(.8,-0.01,.3,.99) 1s normal forwards; 
+    {% comment %} transition: 0.5s;
+    transition-timing-function: ease-in-out; {% endcomment %}
+  }
+  @keyframes myAnim {
+    0% {
+      bottom: 0%;
+    }
+    50%{
+      bottom: 50%;
+    } 
+    100% {
+      bottom: 100%;
+    }
+  }  {% endcomment %}
+</style>
+
+<script>
+  $('.announcement_bar_vertical_slider').slick({
+    slidesToScroll: 1,
+    arrows: false,
+    dots: false,
+    autoplay: true,
+    vertical: true,
+    verticalSwiping: true,
+    autoplaySpeed: 5000,
+    speed: 1000
+  });
+</script>

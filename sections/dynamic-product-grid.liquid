@@ -1,0 +1,81 @@
+<section class="product_grid_section">
+    <h2 class="product_grid_mainheading">{{ section.settings.primary_title }}</h2>
+    <p class="product_grid_subheading">{{ section.settings.secondary_title }}</p>
+    <div class="product_grid_container">
+
+        {% for product in section.settings.grid_product_settings %}
+            {% assign product_color = product.title | split: "- " | last %}
+            <div class="product_container">
+                <img src="{{product.featured_image | img_url: '350x'}}" class="product_grid_image" loading="lazy" width="auto" height="auto">
+                <div class="product_content_container">
+                    <div>
+                        <h3 class="product_title">{{ product.title }}</h3>
+                        <p class="product_color">COLOR - {{ product_color }}</p>
+                        <p class="product_price">{{ product.price | money }}</p>
+                    </div>
+                    <button class="grid_product_addtocart ad_to_cart_id" var_id="{{ product.first_available_variant.id }}" >Add To Cart</button>
+                </div>
+                
+            </div>
+        {% endfor %}
+    </div>
+</section>
+
+
+<script>
+    $(document).on('click','.grid_product_addtocart',function(){ 
+        console.log("block is fired", $(this).attr("var_id"));
+        var ID = $(this).attr("var_id"); 
+        
+        $.ajax({
+            type: 'POST',
+            url: '/cart/add.js',
+            data: {
+                quantity: 1,
+                id: ID
+            },
+            success: function (data) { 
+                $('#CartCount span:first').text(data.quantity);
+                location.reload();
+                console.log(data);
+            },
+            error: function(err) {
+                console.log(err);
+            } 
+        });
+    }) 
+</script>
+
+{% schema %}
+{
+    "name": "Product Grid",
+    "settings": [
+        {
+            "type": "checkbox",
+            "id": "show_this_section",
+            "label": "Display full width image",
+            "default": true
+        },
+        {
+            "type": "text",
+            "id": "primary_title",
+            "label": "Primary Title"
+        },
+        {
+            "type": "text",
+            "id": "secondary_title",
+            "label": "Secondary Title"
+        },
+        {
+            "type": "product_list",
+            "id": "grid_product_settings",
+            "label": "Product"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Product Grid Input"
+        }
+    ]
+}
+{% endschema %}

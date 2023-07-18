@@ -3342,7 +3342,10 @@ theme.recentlyViewed = {
       afterChange: function(index) {
         // Remove all fade animation classes after slide is done
         if (this.args.fade) {
+
+          console.log("argument fade", selectors.allSlides);
           this.el.querySelectorAll(selectors.allSlides).forEach(slide => {
+            
             slide.classList.remove(classes.animateOut);
           });
         }
@@ -4132,7 +4135,9 @@ theme.recentlyViewed = {
       autoPlay: 5000,
       avoidReflow: true,
       cellAlign: theme.config.rtl ? 'right' : 'left',
-      prevNextButtons: true
+      prevNextButtons: true,
+      verticalCells: true,
+      fade: true
     };
     var bar;
     var flickity;
@@ -7544,6 +7549,7 @@ theme.recentlyViewed = {
           childVertical: this.cache.thumbSlider.dataset.position === 'beside',
           pageDots: true, // mobile only with CSS
           wrapAround: true,
+          prevNextButtons: true,
           callbacks: {
             onInit: this.onSliderInit.bind(this),
             onChange: this.onSlideChange.bind(this)
@@ -8233,3 +8239,72 @@ theme.recentlyViewed = {
   });
 
 })();
+
+
+// pdp swatches starts here
+var numberPerRow = [];
+var offsets =      [];
+$(".pdp-color-swatch-list li").each(function(){
+    var thisOffset = $(this).offset().top; 
+    var index = $.inArray(thisOffset, offsets);
+    if(index >=0){
+        numberPerRow[index]++;
+    }else{
+        offsets.push(thisOffset);
+        numberPerRow.push(1);
+    }
+});
+
+console.log( Math.max.apply(null, numberPerRow) );
+var sum = (Math.max.apply(null, numberPerRow));
+var swechesRow1 = (parseInt(sum) + parseInt(sum));
+var swechesRow2 = (parseInt(sum) + parseInt(sum) + parseInt(sum));
+var swechesRow3 = (parseInt(sum) + parseInt(sum) + parseInt(sum) + parseInt(sum));
+var swechesRow4 = (parseInt(sum) + parseInt(sum) + parseInt(sum) + parseInt(sum) + parseInt(sum));
+// alert(parseInt(sum) + parseInt(sum));
+
+$( document ).ready(function() {
+if($('.list-prod.active').attr('id') <= sum ){
+  $('.pdp-color-swatch-list').addClass("rowget1");
+}
+  else if($('.list-prod.active').attr('id') <= swechesRow1){
+  $('.pdp-color-swatch-list').addClass("rowget2");
+    setTimeout(function() {
+  $("button.color_swatches_btn.see_more_colors").trigger("click");
+     }, 100);
+}
+    else if($('.list-prod.active').attr('id') <= swechesRow2){
+  $('.pdp-color-swatch-list').addClass("rowget3");
+      setTimeout(function() {
+for(var i = 0; i < 2; i++ ){
+        $("button.color_swatches_btn.see_more_colors").trigger("click");
+    }
+      }, 100);
+}
+      else if($('.list-prod.active').attr('id') <= swechesRow3){
+  $('.pdp-color-swatch-list').addClass("rowget4");
+        setTimeout(function() {
+for(var i = 0; i < 3; i++ ){
+        $("button.color_swatches_btn.see_more_colors").trigger("click");
+    }
+      }, 500);
+}
+        else if($('.list-prod.active').attr('id') <= swechesRow4){
+  $('.pdp-color-swatch-list').addClass("rowget5");
+          setTimeout(function() {
+for(var i = 0; i < 4; i++ ){
+        $("button.color_swatches_btn.see_more_colors").trigger("click");
+    }
+      }, 100);
+}
+  else{
+  $('.pdp-color-swatch-list').removeClass("rowget1");
+    $('.pdp-color-swatch-list').removeClass("rowget2");
+    $('.pdp-color-swatch-list').removeClass("rowget3");
+    $('.pdp-color-swatch-list').removeClass("rowget4");
+    $('.pdp-color-swatch-list').removeClass("rowget5");
+}
+  });
+// pdp swatches ends here
+  
+

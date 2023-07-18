@@ -1,0 +1,89 @@
+{% assign current_prod_handle = product.handle %}
+{% assign sellers_handle = product.metafields.sellers.topsellers.value | replace: ' ','' | split: ',' %}
+{% assign col_handle = block.settings.product_variant_collection_handle %}
+{% assign number_of_variant_rows = block.settings.product_variants_rows %}
+{% assign count = 0 %}
+
+{% capture related_products %}
+{% assign myCollection = collections[col_handle] %}
+{%- paginate myCollection.products by 1000 -%}
+{% for prod in myCollection.products %}
+
+{%- for variant in prod.variants -%}
+
+{% assign v_id = prod.selected_or_first_available_variant.id %}
+{% assign v_img = prod.selected_or_first_available_variant.featured_image %}
+{% assign v_qty = variant.inventory_quantity %}
+  
+
+{% break %}
+ {%- endfor -%}
+{% assign count = count | plus: 1 %}
+      <li class="list-prod {% if prod.handle == product.handle %}active{% endif %}" id="{{ count }}"  data-topseller="{% if sellers_handle contains prod.handle %}true{% else %}false{% endif %}" style="order: {{prod.metafields.variant.order}};">
+        <a href="{{ prod.url }}?variant={{prod.selected_or_first_available_variant.id}}"
+           title="{{ prod.title }}"
+           data-toggle="tooltip"
+           data-boundary="window"
+           data-trigger="hover"
+           data-container="body"
+           data-placement="top"
+           data-original-title="{{ prod.title }}"
+           data-index = "{{forloop.index}}"
+           data-compare-price= "{{prod.compare_at_price | money }}"
+           data-price ="{{prod.price  | money}}"             
+           data-variantid ="{{v_id}}"          
+           data-option-title="{{ value | escape }}"
+           data-opt-title="{{ value | escape | replace: ' ','-' }}"
+           data-href="{{ v_img | product_img_url: '548x' }}"
+           data-quantity="{{v_qty}}">
+           <span class="pdp_color_swatches_container {% if prod.handle == product.handle %}current_product_color_swatch{% endif %}">
+                <div class="pdp-color--item" 
+                    style="{% if prod.metafields.swatch.color_code != blank %}
+                            background-color:{{ prod.metafields.swatch.color_code}};{% endif %}
+                            {% if prod.metafields.swatch.image != blank %}
+                            background-image:url({{ prod.metafields.swatch.image }}){% endif %}">
+                </div>
+            </span>
+        </a>
+      </li>
+ 
+  {% endfor %} 
+{%- endpaginate -%}
+{% endcapture %}
+
+
+
+
+<div class="pdp-variant-color-wrapper">
+  {% if product.metafields.sellers.topsellers.value != blank %}
+    {% comment %} Hidding top sellers section {% endcomment %}
+  {% comment %} <div class="pdp-variant-options" id="topSellersSection">
+    <h2>Top Sellers</h2>  
+    <ul class="pdp-color-swatch-list {% if template == 'product.ulace-siliprint' %}siliprint-swatch{% endif %}">
+      {{ related_products }}
+    </ul>   
+  </div> {% endcomment %}
+  {% endif %}
+  <div class="pdp-variant-options" id="moreColorSection">
+    {% comment %} {% if template == 'product.ulace-siliprint' %}
+    <h2>More Patterns</h2>
+    {% else %}
+    <h2>More Colors</h2>
+    {% endif %}     {% endcomment %}
+
+    {% assign product_variant_color = product.title | split: "- " | last %}
+    <h3 class="pdp_color_heading">COLOR - {{product_variant_color}}</h3>
+    <p class="pdp_color_subheading">{{ block.settings.product_color_subtitle }}</p>
+
+    <ul class="pdp-color-swatch-list {% if template == 'product.ulace-siliprint' %}siliprint-swatch{% endif %}" data-variant_columns_number="{{number_of_variant_rows}}">
+      {{ related_products }}
+    </ul>
+    <div class="swatches_btn_container">
+    
+      <button class="color_swatches_btn see_more_colors">see more colors</button>
+      <button class="color_swatches_btn see_less_colors">see less colors</button>
+      
+    </div>
+    
+  </div>
+</div>

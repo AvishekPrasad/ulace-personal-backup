@@ -1,0 +1,25 @@
+<div class="section_spacing_container"></div>
+<style>
+    .section_spacing_container{
+        padding-top: {{section.settings.section_spacing}}px;
+    }
+</style>
+
+{% schema %}
+{
+    "name": "Section Spacing",
+    "settings": [
+        {
+            "type": "text",
+            "id": "section_spacing",
+            "label": "Section Spacing",
+            "default": "40"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Section Spacing"
+        }
+    ]
+}
+{% endschema %}

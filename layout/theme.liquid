@@ -27,7 +27,10 @@
 
   {%- render 'font-face' -%}
   {{ 'theme.css' | asset_url | stylesheet_tag: preload: true }}
+  {{ 'product-page.css' | asset_url | stylesheet_tag: preload: true }}
   {%- render 'css-variables' -%}
+
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 
   <script>
     document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
@@ -86,6 +89,7 @@
   {%- endif -%}
 
   <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'product-page.js' | asset_url }}" defer="defer"></script>
 
   {%- if request.page_type contains 'customers/' -%}
     <script src="{{ 'shopify_common.js' | shopify_asset_url }}" defer="defer"></script>
@@ -94,6 +98,13 @@
   {% if request.design_mode %}
     <script src="https://api.archetypethemes.co/design-mode.js" defer="defer"></script>
   {% endif %}
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 	{{ shop.metafields.loox["global_html_head"] }}
 </head>
@@ -138,7 +149,7 @@
       </image-element>
     </div>
   </template>
-
+  <script src="{{ 'js_image-zoom.min.js' | asset_url }}" defer></script>
 	{{ shop.metafields.loox["global_html_body"] }}
 </body>
 </html>

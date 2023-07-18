@@ -1,0 +1,34 @@
+<section class="banner_image_section">
+    <a {% if section.settings.banner_url_redirect %}href="{{ section.settings.banner_url_redirect }}"{% endif %} class="banner_redirect_link">
+        <img src="{{ section.settings.banner_image | img_url: 'master' }}" loading="lazy" height="auto" width="auto">
+    </a>
+</section>
+
+{% schema %}
+{
+    "name": "Simple Banner Image",
+    "settings": [
+        {
+            "type": "checkbox",
+            "id": "show_this_section",
+            "label": "Display full width image",
+            "default": true
+        },
+        {
+            "type": "image_picker",
+            "id": "banner_image",
+            "label": "Banner image"
+        },
+        {
+            "type": "url",
+            "id": "banner_url_redirect",
+            "label": "Banner URl link"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Simple Banner Image"
+        }
+    ]
+}
+{% endschema %}

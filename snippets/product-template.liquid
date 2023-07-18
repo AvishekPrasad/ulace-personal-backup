@@ -73,7 +73,7 @@
 
   {%- render 'product-template-variables', product: product, current_variant: current_variant -%}
 
-  <div class="page-content page-content--product">
+  <div class="page-content page-content--product product_main_container">
     <div class="page-width">
 
       <div class="grid{% unless image_position == 'left' %} grid--product-images-right{% endunless %}{% if mobile_layout == 'partial' %} grid--product-images--partial{% endif %}">
@@ -134,6 +134,11 @@
                     {{ 'home_page.onboarding.product_title' | t }}
                   {%- endunless -%}
                 </h1>
+                {% if product.metafields.tagline.text != blank %}
+                  <p class="pdp--title">
+                    {{ product.metafields.tagline.text }}
+                  </p>
+                {% endif %}
               {%- endif -%}
 
               {%- if sku_enable -%}
@@ -152,11 +157,45 @@
                   {%- when '@app' -%}
                     {% render block %}
                   {%- when 'separator' -%}
-                    <div class="product-block" {{ block.shopify_attributes }}><hr></div>
+                    <div class="product-block product_block_separator" {{ block.shopify_attributes }}></div>
                   {%- when 'text' -%}
                     <div class="product-block" {{ block.shopify_attributes }}>
                       {{ block.settings.text }}
                     </div>
+                  {%- when 'productvariants' -%}
+                    {% render 'all-product-variants', block: block %}
+                  {%- when 'product_delivery_info' -%}
+                    <div class="product_delivery_msg_container">
+                    {% if block.settings.product_delivery_text1 %}
+                      <span class="delivery_content_container delivery_ele_1">
+                          {% if block.settings.product_delivery_image1 %}<img src="{{ block.settings.product_delivery_image1 | img_url: '35x' }}" class="delivery_icon_img" loading='lazy' height="auto" width="auto">{% endif %}
+                          <span class="delivery_icon_text">{{ block.settings.product_delivery_text1 }}</span>
+                      </span>
+                    {% endif %}
+                    {% if block.settings.product_delivery_text2 %}
+                      <span class="delivery_content_container delivery_ele_2">
+                        {% if block.settings.product_delivery_image2 %}<img src="{{ block.settings.product_delivery_image2 | img_url: '35x' }}" class="delivery_icon_img" loading='lazy' height="auto" width="auto">{% endif %}
+                        <span class="delivery_icon_text"><p>{{ block.settings.product_delivery_text2 }}</p></span>
+                        
+                      </span>
+                    {% endif %}
+                    {% if block.settings.product_delivery_text3 %}
+                      <span class="delivery_content_container delivery_ele_3">
+                        
+                        {% if block.settings.product_delivery_image3 %}<img src="{{ block.settings.product_delivery_image3 | img_url: '35x' }}" class="delivery_icon_img" loading='lazy' height="auto" width="auto">{% endif %}
+                        <span class="delivery_icon_text"><p>{{ block.settings.product_delivery_text3 }}</p></span>
+                        
+                      </span>
+                    {% endif %}
+                    {% if block.settings.product_delivery_text4 %}
+                      <span class="delivery_content_container delivery_ele_4">
+                        
+                        {% if block.settings.product_delivery_image4 %}<img src="{{ block.settings.product_delivery_image4 | img_url: '35x' }}" class="delivery_icon_img" loading='lazy' height="auto" width="auto">{% endif %}
+                        <span class="delivery_icon_text"><p>{{ block.settings.product_delivery_text4 }}</p></span>
+                        
+                      </span>
+                    </div>
+                    {% endif %}
                   {%- when 'tab' -%}
                     {% assign tab_id = block.id | append: product.id %}
                     {% capture tab_content %}
@@ -243,18 +282,18 @@
                       </div>
 
                       {%- if shop.taxes_included or shop.shipping_policy.body != blank -%}
-                        <div class="product__policies rte small--text-center">
+                        {% comment %} <div class="product__policies rte small--text-center">
                           {%- if shop.taxes_included -%}
                             {{ 'products.product.include_taxes' | t }}
                           {%- endif -%}
                           {%- if shop.shipping_policy.body != blank -%}
                             {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
                           {%- endif -%}
-                        </div>
+                        </div> {% endcomment %}
                       {%- endif -%}
                     </div>
                   {%- when 'quantity_selector' -%}
-                    <div class="product-block" {{ block.shopify_attributes }}>
+                    <div class="product-block product_quantity_block" {{ block.shopify_attributes }}>
                       <div class="product__quantity">
                         {% assign qty_id = section_id | append: product.id %}
                         <label for="Quantity-{{ qty_id }}">{{ 'products.product.quantity' | t }}</label>
@@ -328,7 +367,7 @@
                       {%- endunless -%}
                     </div>
                   {%- when 'buy_buttons' -%}
-                    <div class="product-block" {{ block.shopify_attributes }}>
+                    <div class="product-block product_addtocart_btn" {{ block.shopify_attributes }}>
                       {%- unless product.empty? -%}
                         <div class="product-block">
                           {%- render 'product-form',
